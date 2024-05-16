@@ -1,0 +1,7 @@
+<apex:page controller="MyAccount">
+<apex:form >
+    <apex:inputText value="{!MyAccount.name}"/>
+        <br></br>
+     <apex:commandButton value="dosave" action="{!dosave}"/>
+</apex:form>
+</apex:page>

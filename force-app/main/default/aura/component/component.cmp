@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	welcome to aura
+    <ltng:require scripts="{!$Resource.JsShared}" />
+    
+    <aura:attribute name="Amount" type="double" default="25000"/>
+    <aura:attribute name="Tenure" type="double" />
+    <aura:attribute name="Duration" type="double"/>
+    <aura:attribute name="return" type="double"/>
+    <ui:inputNumber aura:id ="duration" label="Enter duration" value="{!v.Duration}"/>
+    
+    <ui:inputNumber label="Enter amount" value="{!v.Amount}"/>
+    <ui:inputNumber label="Tenure" value="{!v.Tenure}"/>
+    
+    
+    return value <ui:outputNumber aura:id="ret" value="{!v.return}" /> 
+   
+    <aura:handler name="change" value = "{!v.Duration}" action ="{!c.validate1}"/>
+    <lightning:button class="blue" label="Calculate returns" onclick="{!c.calculate}" />
+    
+</aura:component>

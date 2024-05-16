@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="Number1" type="Integer"/>
+    <ui:inputNumber label="Enter Number1" value="{!v.Number1}"/>
+    
+        return value<ui:outputNumber aura:id="ret" value="{!v.return}"/>
+    
+    <ui:button label="+" press="{!c.myadd}" />
+    <ui:button label="-" press="{!c.mysub}" />
+</aura:component>

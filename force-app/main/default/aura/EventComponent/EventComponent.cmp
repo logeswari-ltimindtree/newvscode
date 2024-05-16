@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:handler name="childEvent" event="c:ComponentEvent" action="{!c.handlevent}" />
+    <aura:attribute name="childmg"  type="string"/>
+    
+	<c:ChildComponent Name = "Logeswari" Age ="22" />
+ 
+	<lightning:button label="Getname" title="Neutral action" onclick="{! c.handleClick }"/>
+</aura:component>

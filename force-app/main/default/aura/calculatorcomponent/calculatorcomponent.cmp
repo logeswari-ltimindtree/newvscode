@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	Welcome User!!!
+    <aura:attribute name="Number1" type="Integer"/>
+    <aura:attribute name="Number2" type="Integer"/>
+    <aura:attribute name="Result" type="Integer"/>
+    
+   	<ui:inputNumber aura:id ="Number1" label="Enter number" value="{!v.Number1}"/>
+    
+    <ui:inputNumber label="Enter Number1" value="{!v.Number1}"/>
+    <ui:inputNumber label="Enter Number2" value="{!v.Number2}"/>
+    
+    <ui:inputNumber label="Result" value="{!v.Result}"/>
+    
+    return value<ui:outputNumber aura:id="ret" value="{!v.return}"/>
+    
+    <ui:button class="blue" label="+" press="{!c.myadd}" />
+    <ui:button label="-" press="{!c.mysub}" />
+    
+    <aura:handler name="change" value = "{!v.Number1}" action ="{!c.validate1}"/>
+</aura:component>

@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<p>Hello user</p>
+    <aura:attribute name="arrayDemo" type="String[]"
+                    default="['v1','v2','v3']" />
+    Array Values : {!v.arrayDemo[0]}
+    <hr></hr>
+    <aura:attribute name="ListDemo" type="list"
+                   default="[1,2,3,4,5,5]" />
+    List Values : {!v.ListDemo[1]}
+    <hr></hr>
+    
+    <aura:attribute name="SetDemo" type="Set"
+                    default="[1,2,4,9,0]" />
+    Set Values : {!v.SetDemo[4]}
+</aura:component>

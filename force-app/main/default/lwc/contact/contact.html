@@ -1,0 +1,13 @@
+<template>
+    Welcome user
+<lightning-card title="Conditional Rendering Example">
+<div class="slds-m-around_medium">
+<!-- Conditionally render the button -->
+<template if:true={showButton}>
+<lightning-button label="Click Me" onclick={handleClick} variant="brand"></lightning-button>
+</template>
+</div>
+<lightning-button label="Submit" onclick={handleClickToogle} variant="brand"></lightning-button>
+<lightning-button label="Show" onclick={handleClickToogleShow} variant="brand"></lightning-button>
+</lightning-card>
+</template>

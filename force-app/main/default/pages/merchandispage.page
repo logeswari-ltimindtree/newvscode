@@ -1,0 +1,22 @@
+<apex:page standardController="Merchandis__c"> <!-- StandardController must be given in apex page -->
+    <apex:form >
+        <apex:pageBlock >
+        <apex:image url="{!$Resource.WalmartImage}" width="50" height="50"/>
+            <marquee>
+                <b style="font-size:30px;color:Red">
+                    Welcome {!$User.FirstName}
+                 </b>
+            </marquee>
+        <apex:pageBlockSection columns="3" title="Merchandis Information">
+            <apex:inputField value="{!Merchandis__c.Price__c}" />
+            <apex:inputField value="{!Merchandis__c.Description__c}"/>
+            <apex:inputField value="{!Merchandis__c.Total_sold_price__c}"/>
+            <apex:inputField value="{!Merchandis__c.Stocks__c}" />          
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+            <apex:commandButton value="{!$Label.Save}" action="{!Save}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>
+        </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

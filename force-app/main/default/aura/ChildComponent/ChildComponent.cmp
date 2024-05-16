@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:registerEvent name="childEvent" type="c:ComponentEvent"/>
+    <aura:attribute name ="Name" type="String"/>
+    <aura:attribute name ="Age" type="String"/>
+    
+    <br/> <div> this is child component</div><br/>
+    
+    <p>Name from parent<lightning:formattedText value="{!v.Name}" /></p>
+    <p>Age from parent<lightning:formattedText value="{!v.Age}" /></p>
+    
+    <lightning:input type="email" label="Email" value="{!v.Email}" />
+    <lightning:button label="fireevent" title="Neutral action" onclick="{!c.handleclick}" />
+</aura:component>

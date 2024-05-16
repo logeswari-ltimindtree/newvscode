@@ -1,0 +1,10 @@
+<aura:component controller="GetaccountDetail" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="AccountNumber" type="String" />
+	<aura:attribute name="Name" type="String" />
+    
+    <lightning:input type="AccountNumber" label="AccountNumber" value="{!v.AccountNumber}" placeholder="CCH189282" />
+    
+    <lightning:button label="Getname" title="Getname action" onclick="{!c.handleClick}" />
+    
+    <lightning:input label="Name" value="{!v.Name}"/>
+</aura:component>
